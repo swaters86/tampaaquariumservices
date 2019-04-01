@@ -1,0 +1,57 @@
+<%@ Master Language="VB" CodeFile="Subpage.master.vb" Inherits="Masters_Homepage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+	<title>Tampa Aquarium Service</title>
+	<link rel="stylesheet" href="../CSS/print.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="../CSS/screen.css" type="text/css" media="screen" />
+	<!--[if IE]><link rel="stylesheet" href="CSS/ie.css" type="text/css" media="screen, projection" /><![endif]--> 
+	<script type="text/javascript" src="JS/jquery.latest.js"></script>
+   
+</head>
+<body>
+	<form id="form1" runat="server">
+   
+   <div id="wrapper">
+
+   <div class="span-24 header last" style="background:none;">
+
+<a href="../Default.aspx" title="back to homepage"><img class="logo" src="~/Images/tas_logo.png" alt="Tampa Aquarium Logo" runat="server" /></a>
+	   
+   </div>
+   
+   <div class="span-24 navigation last" style="background:none;">
+   
+	<ul id="nav-list">
+		   <li><asp:HyperLink ID="linkHome" runat="server"  NavigateURL="~/Default.aspx">Home</asp:HyperLink></li>
+		   <li><asp:HyperLink ID="linkAbout" runat="server" NavigateUrl="~/Aboutus.aspx">About Us</asp:HyperLink></li>
+		   <li><asp:HyperLink ID="linkServices" runat="server" NavigateUrl="~/Services.aspx">Services</asp:HyperLink></li>
+		   <li><asp:HyperLink ID="linkPortfolio" runat="server" NavigateUrl="~/Portfolio.aspx">Portfolio</asp:HyperLink></li>
+		   <li><asp:HyperLink ID="linkContact" runat="server" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink></li>
+	</ul>
+	
+   </div>
+	 
+   
+   <div class="span-24 last prepend-top">
+		<asp:contentplaceholder id="MainContentPlaceholder" runat="server">
+		</asp:contentplaceholder>
+   </div>
+   
+		
+  <div class="span-24 prepend-top sub-content" style="margin-top:4px;">
+		<asp:contentplaceholder id="SubContentPlaceHolder" runat="server">
+		</asp:contentplaceholder>
+  </div>            
+ 
+ 
+  </div>
+  
+   <div id="bottom-frame">&nbsp;</div>
+  
+  
+	</form>
+</body>
+</html>

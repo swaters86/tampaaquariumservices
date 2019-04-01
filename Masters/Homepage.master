@@ -1,0 +1,58 @@
+<%@ Master Language="VB" CodeFile="Homepage.master.vb" Inherits="Masters_Homepage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Tampa Aquarium Service</title>
+    <%--<link rel="stylesheet" href="../CSS/print.css" type="text/css" media="print" />--%>
+    <%--<link rel="stylesheet" href="../CSS/screen.css" type="text/css" media="screen" />--%>
+    <!--[if IE]><link rel="stylesheet" href="CSS/ie.css" type="text/css" media="screen, projection" /><![endif]--> 
+     
+</head>
+<body>
+    <form id="form1" runat="server">
+    <cc1:ToolkitScriptManager runat="server" CombineScripts="true" CombineScriptsHandlerUrl="~/JS/MyScripts.js">
+        <Scripts>
+            <asp:ScriptReference Path="~/Scripts/jquery-1.7.1.js" />
+            <asp:ScriptReference Path="~/Scripts/jquery.cycle.all.js" />
+        </Scripts>
+    </cc1:ToolkitScriptManager>
+   
+    <div id="wrapper">
+        <div class="header">
+            <a class="logo" href="~/" title="Homepage" runat="server">
+                <img src="~/Images/tas_logo_sm.jpg" alt="Tampa Aquarium Logo" runat="server" />
+            </a>
+
+            <div class="infoBlock">
+                Call John today at:
+                <b>(813) 486-4798</b> <br /><br />
+                We provide excellent service for you aquarium throughout<br />
+                Hillsborough, Pinellas and Pasco County.
+                <br /><br />
+                Find us on <a href="http://www.facebook.com/pages/Tampa-Aquarium-Service/392683447424315" target="_blank" title="Tampa Aquarium Service on Facebook">Facebook</a>
+            </div>
+        </div>
+        
+        <div class="nav">
+            <ul>
+                <li><a href="~/" title="Homepage" runat="server">Home</a></li>
+                <li><a href="~/Gallery.aspx" title="Gallery" runat="server">Gallery</a></li>
+                <li class="last-child"><a id="A1" href="~/About.aspx" title="About" runat="server">About</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <asp:contentplaceholder id="MainContent" runat="server">
+            </asp:contentplaceholder>
+        </div>            
+
+        <div class="footer">
+            Copyright <%= Now.Year%>&copy; Tampa Aquarium Service
+        </div>
+    </div>
+  
+    </form>
+</body>
+</html>
